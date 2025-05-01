@@ -28,6 +28,8 @@ const batchAverageWAPContest3 = totalmarksforContest3 / 40;
 const batchAverageWAPContest4 = totalmarksforContest4 / 40;
 const batchAverageWAPMidsem = totalmarksforMidsem / 40;
 
+const batchAverageWAPContest = (batchAverageWAPContest1+batchAverageWAPContest2+batchAverageWAPContest3+batchAverageWAPContest4)/4
+
 const dataForAvgContestMarksInWAP = [
   {
     name: "Contest1",
@@ -51,4 +53,5 @@ const dataForAvgContestMarksInWAP = [
   },
 ];
 
+export{batchAverageWAPContest}
 export default dataForAvgContestMarksInWAP;

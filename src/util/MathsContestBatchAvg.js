@@ -28,6 +28,8 @@ const batchAverageMathsContest3 = totalmarksforContest3 / 40;
 const batchAverageMathsContest4 = totalmarksforContest4 / 40;
 const batchAverageMathsMidsem = totalmarksforMidsem / 40;
 
+const batchAverageMathsContest = (batchAverageMathsContest1+batchAverageMathsContest2+batchAverageMathsContest3+batchAverageMathsContest4) / 4
+
 const dataForAvgContestMarksInMaths = [
   {
     name: "Contest1",
@@ -50,5 +52,5 @@ const dataForAvgContestMarksInMaths = [
     Average_score: batchAverageMathsContest4,
   },
 ];
-
+export{batchAverageMathsContest};
 export default dataForAvgContestMarksInMaths;
