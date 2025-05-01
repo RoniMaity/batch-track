@@ -3,9 +3,9 @@
 import { Flex, Layout, Menu } from "antd";
 import Link from "next/link";
 import Image from "next/image";
-import { HomeOutlined, UserOutlined, FallOutlined,FrownOutlined } from "@ant-design/icons";
+import { HomeOutlined, UserOutlined, FallOutlined, FrownOutlined } from "@ant-design/icons";
 
-const { Sider, Header, Content, Footer } = Layout;
+const { Sider, Content, Footer } = Layout;
 
 const menuItems = [
   {
@@ -33,7 +33,10 @@ const menuItems = [
 export default function AppLayout({ children }) {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Sider breakpoint="lg" collapsedWidth="0">
+      <Sider breakpoint="lg" collapsedWidth="0" style={{
+        backgroundColor: "white"
+      }}>
+
         <div
           style={{
             color: "white",
@@ -43,17 +46,21 @@ export default function AppLayout({ children }) {
           }}
         >
           <Image
+          style={{textAlign:"center"}}
             src="/logo.png"
             alt="BatchTrack Logo"
-            width={100} // required
-            height={100} // required
+            width={150} // required
+            height={150} // required
             priority // optional: for faster loading
           />
         </div>
-        <Menu theme="dark" mode="inline" items={menuItems}/>
+        <Menu theme="light" mode="inline" items={menuItems} style={{
+          '--antd-wave-shadow-color': 'transparent',
+          '--antd-primary-color': 'blue', // This might work depending on setup
+        }} />
       </Sider>
       <Layout>
-        <Content style={{ margin: "24px 16px 0" }}>
+        <Content>
           <div style={{ padding: 24, background: "white", minHeight: 360 }}>
             {children}
           </div>

@@ -8,3 +8,9 @@ background-color: #ffffff;
 color: rgb(5, 24, 82);
 
 }
+/* Change the background of selected menu item */
+.ant-menu-light .ant-menu-item-selected {
+    background-color: #dbeafe !important; /* Your desired background color */
+    color: #1d4ed8 !important;             /* Your desired text/icon color */
+  }
+  

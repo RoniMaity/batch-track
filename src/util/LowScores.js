@@ -47,12 +47,15 @@ students.forEach((obj) => {
         WapMidSemLowScore.push(obj)
     }
     if (avgMathContestScore <= 50) {
+        obj['mathsavgContestScore'] = avgMathContestScore
         mathsLowScore.push(obj);
     }
     if (avgDSAContestScore <= 50) {
+        obj['DSAavgContestScore'] = avgDSAContestScore
         DsaLowScore.push(obj);
     }
     if (avgWAPContestScore <= 50) {
+        obj['WAPavgContestScore'] = avgWAPContestScore
         WapLowScore.push(obj);
     }
 });

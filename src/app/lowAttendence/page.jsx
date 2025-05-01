@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
+
 import {
   mathsLowAttendence,
   DsaLowAttendence,
@@ -9,6 +11,7 @@ import {
 import { Card, Flex, Table } from "antd";
 
 const LowAttendence = () => {
+  const router = useRouter();
   const columnsMaths = [
     {
       title: "Name",
@@ -97,6 +100,9 @@ const LowAttendence = () => {
                 rowKey="id"
                 columns={columnsMaths}
                 dataSource={mathsLowAttendence}
+                onRow={(record) => ({
+                  onClick: () => router.push(`/students/${record.id}`),
+                })}
               />
             </div>
           </Flex>
@@ -113,6 +119,9 @@ const LowAttendence = () => {
                 rowKey="id"
                 columns={columnsDSA}
                 dataSource={DsaLowAttendence}
+                onRow={(record) => ({
+                  onClick: () => router.push(`/students/${record.id}`),
+                })}
               />
             </div>
           </Flex>
@@ -129,6 +138,9 @@ const LowAttendence = () => {
                 rowKey="id"
                 columns={columnsWAP}
                 dataSource={WapLowAttendence}
+                onRow={(record) => ({
+                  onClick: () => router.push(`/students/${record.id}`),
+                })}
               />
             </div>
           </Flex>
