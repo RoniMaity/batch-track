@@ -1,5 +1,12 @@
+
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { ConfigProvider } from "antd";
+import theme from "../../config/themeConfig";
+import AntdCompatPatch from "./_antd-compat";
+import AppLayout from "./AppLayout"; // ✅ Add this
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +27,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <AntdCompatPatch>
+          <ConfigProvider theme={theme}>
+            <AntdRegistry>
+              <AppLayout>{children}</AppLayout> {/* ✅ Add sidebar layout wrapper */}
+            </AntdRegistry>
+          </ConfigProvider>
+        </AntdCompatPatch>
       </body>
     </html>
   );
