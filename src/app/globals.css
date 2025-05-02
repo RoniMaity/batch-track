@@ -8,9 +8,25 @@ background-color: #ffffff;
 color: rgb(5, 24, 82);
 
 }
-/* Change the background of selected menu item */
+
 .ant-menu-light .ant-menu-item-selected {
-    background-color: #dbeafe !important; /* Your desired background color */
-    color: #1d4ed8 !important;             /* Your desired text/icon color */
+    background-color: #dbeafe !important; 
+    color: #1d4ed8 !important;            
   }
   
+
+.ant-table-thead > tr > th {
+  background-color: #1e3a8a;
+  color: white;
+  font-weight: bold;
+}
+
+.ant-table-tbody > tr > td {
+  background-color: #00416c;
+  color: #ffffff;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: #424851;
+  color: #878e96;
+}
