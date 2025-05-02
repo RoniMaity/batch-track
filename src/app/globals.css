@@ -26,7 +26,7 @@ color: rgb(5, 24, 82);
   color: #ffffff;
 }
 
-.custom .ant-table-tbody > tr:hover > td {
+.ant-table-tbody>tr:hover > td {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
