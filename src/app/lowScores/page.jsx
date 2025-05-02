@@ -71,9 +71,20 @@ const LowScores = () => {
     console.log(mathsLowScore)
     return (
         <div>
+            <h1
+                style={{
+                    textAlign: "center",
+                    padding: "25px",
+                    border: "1px solid grey",
+                    margin: "10px",
+                    marginBottom:"40px",
+                }}
+            >
+                Students with Low Scores
+            </h1>
             <div>
                 <Flex vertical>
-                    <div style={{ textAlign: "center" }} >
+                    <div style={{ textAlign: "center", margin:"40px" }} >
                         <Card>
                             <h2>
                                 Mathematics II
@@ -93,7 +104,7 @@ const LowScores = () => {
                 </Flex>
                 <div>
                     <Flex vertical>
-                        <div style={{ textAlign: "center" }} >
+                        <div style={{ textAlign: "center", margin:"40px" }} >
                             <Card>
                                 <h2>
                                     Data Structures and Algorithms
@@ -113,7 +124,7 @@ const LowScores = () => {
                     </Flex>
                     <div>
                         <Flex vertical>
-                            <div style={{ textAlign: "center" }} >
+                            <div style={{ textAlign: "center", margin:"40px" }} >
                                 <Card>
                                     <h2>
                                         Web Applications

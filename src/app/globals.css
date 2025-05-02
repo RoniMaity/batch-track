@@ -16,17 +16,17 @@ color: rgb(5, 24, 82);
   
 
 .ant-table-thead > tr > th {
-  background-color: #1e3a8a;
+  background-color: #3b58a6;
   color: white;
   font-weight: bold;
 }
 
 .ant-table-tbody > tr > td {
-  background-color: #00416c;
+  background-color: #0a2d4a;
   color: #ffffff;
 }
 
-.ant-table-tbody > tr:hover > td {
-  background-color: #424851;
-  color: #878e96;
+.custom .ant-table-tbody > tr:hover > td {
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }

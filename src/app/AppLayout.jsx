@@ -3,7 +3,7 @@
 import { Flex, Layout, Menu } from "antd";
 import Link from "next/link";
 import Image from "next/image";
-import { HomeOutlined, UserOutlined, FallOutlined, FrownOutlined } from "@ant-design/icons";
+import { HomeOutlined, UserOutlined, FallOutlined, FrownOutlined,StopOutlined } from "@ant-design/icons";
 
 const { Sider, Content, Footer } = Layout;
 
@@ -27,6 +27,11 @@ const menuItems = [
     key: "4",
     icon: <FrownOutlined />,
     label: <Link href="/lowScores">Low Scores</Link>,
+  },
+  {
+    key:"5",
+    icon:<StopOutlined />,
+    label:<Link href="/UFMstudents">UFM Students</Link>
   }
 ];
 

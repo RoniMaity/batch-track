@@ -6,7 +6,7 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ConfigProvider } from "antd";
 import theme from "../../config/themeConfig";
 import AntdCompatPatch from "./_antd-compat";
-import AppLayout from "./AppLayout"; 
+import AppLayout from "./AppLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <AntdCompatPatch>
           <ConfigProvider theme={theme}>
             <AntdRegistry>
-              <AppLayout>{children}</AppLayout> 
+              <AppLayout>{children}</AppLayout>
             </AntdRegistry>
           </ConfigProvider>
         </AntdCompatPatch>
