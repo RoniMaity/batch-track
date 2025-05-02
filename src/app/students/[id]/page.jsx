@@ -6,6 +6,12 @@ import students from "../../../data/students.js";
 import Profile from "../../../components/Profile.js";
 import { Flex } from "antd";
 
+const AttendenceChart = dynamic(
+  () => import('../../../components/AttendenceChart.js'), {
+  ssr: false,
+  loading: () => <div>Loading charts...</div>
+}
+)
 
 const PerformanceRadar = dynamic(
   () => import('../../../components/PerformanceRadar.js'),
@@ -24,9 +30,32 @@ export default function StudentDetailPage({ params }) {
   }
 
   return (
-    <Flex justify="center" wrap="wrap" style={{ padding: 40, gap: 40 }}>
-      <Profile student={student} />
-      <PerformanceRadar student={student} />
-    </Flex>
+    <div>
+      <Flex vertical>
+
+        <div>
+          <Flex
+            justify="space-between"
+            align="flex-start"
+            style={{
+              padding: '24px',
+              maxWidth: '1200px',
+              margin: '0 auto',
+              gap: '48px'
+            }}
+          >
+            <div style={{ flex: '0 0 auto' }}>
+              <Profile student={student} />
+            </div>
+            <div style={{ flex: '1 1 auto', minWidth: '500px' }}>
+              <PerformanceRadar student={student} />
+            </div>
+          </Flex>
+        </div>
+        <div style={{ textAlign: "center" }} >
+          <AttendenceChart student={student} />
+        </div>
+      </Flex>
+    </div>
   );
 }

@@ -36,7 +36,6 @@ const AttendancePieChart = ({ present, width, height, outerRadius }) => {
 
   return (
     <PieChart width={width} height={height}>
-      {/* SVG Gradients */}
       <defs>
         <radialGradient
           id="presentGradient"
