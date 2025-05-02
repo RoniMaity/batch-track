@@ -5,7 +5,8 @@ import { use } from 'react';
 import students from "../../../data/students.js";
 import Profile from "../../../components/Profile.js";
 import { Flex } from "antd";
-
+import ClubComponent from '../../../components/ClubComponent.js';
+import UFMComponent from '../../../components/UFMComponent.js';
 const AttendenceChart = dynamic(
   () => import('../../../components/AttendenceChart.js'), {
   ssr: false,
@@ -56,6 +57,16 @@ export default function StudentDetailPage({ params }) {
           <AttendenceChart student={student} />
         </div>
       </Flex>
+      <div>
+        <Flex>
+          <div>
+            <ClubComponent student={student} />
+          </div>
+          <div>
+            <UFMComponent />
+          </div>
+        </Flex>
+      </div>
     </div>
   );
 }
